@@ -7,14 +7,13 @@ palm.configure(api_key='PALM API')
 
 models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
 
-model = models[0].name
+model = models[0].name #chat-bison-001
 
 def generate_solution(prompt):
-    # Generate text based on the user's input prompt
     completion = palm.generate_text(
         model=model,
-        prompt=prompt,
-        temperature=0,  # You can adjust the temperature to control randomness
+        prompt="You are an expert at solving word problems."+prompt+"give a step by step analysis",
+        temperature=0,  
         max_output_tokens=800,
     )
     
