@@ -11,12 +11,16 @@
 
     <title>WordWise</title>
 
+
     <link href="static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link rel="icon" href="https://cdn3d.iconscout.com/3d/premium/thumb/mathematics-7846926-6293606.png?f=webp">
 
     <style id="" media="all">
         /* latin-ext */
+        ::-webkit-scrollbar {
+            display: none;
+        }
 
         @font-face {
             font-family: 'Lato';
@@ -906,41 +910,42 @@
     <div class="page-wrapper bg-img-1 p-t-200 p-b-120">
         <div class="wrapper wrapper--w900">
             <div class="card card-4" style="border-radius: 10mm;">
-                <div class="card-body" >
+                <div class="card-body">
                     <ul class="tab-list">
                         <li class="tab-list__item active">
-                            <a class="tab-list__link" href="#" data-toggle="tab">WordWise : Unlocking Solutions to Math Challenges</a>
+                            <a class="tab-list__link" href="#" data-toggle="tab">WordWise : Unlocking Solutions to Math
+                                Challenges</a>
                         </li>
-    
+
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <form method="post" action="{{ url_for('index') }}">
                                 <div class="input-group input-group-big">
                                     <label class="label">Ask:</label>
-                                    <input class="input--style-1" 
-                                        placeholder="Type the Word Problem" type="text" id="word_problem" name="word_problem" required>
+                                    <input class="input--style-1" placeholder="Type the Word Problem" type="text"
+                                        id="word_problem" name="word_problem" required>
                                     <!-- <i class="zmdi zmdi-search input-group-symbol"></i> -->
                                 </div>
-                       
-                                    <div class="col-2">
-                                        <button class="btn-submit" type="submit">search</button>
-                                    </div>
+
+                                <div class="col-2">
+                                    <button class="btn-submit" type="submit">search</button>
                                 </div>
-                            </form>
-                            {% if solution %}
-                            <div class="col-2">
+                        </div>
+                        </form>
+                        {% if solution %}
+                        <div class="col-2">
                             <h2 style="color: aliceblue; margin-left: 1.7cm;">Solution: {{ solution }}</h2>
                             <br><br>
-                            </div>
-                            
-                            {% endif %}
                         </div>
-                       
+
+                        {% endif %}
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="static/vendor/jquery/jquery.min.js"></script>
