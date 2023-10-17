@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-palm.configure(api_key='AIzaSyBH3L0M14QWt0f6iLBMquW5omThXAwwArM')
+palm.configure(api_key='PALM API')
 
 models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
 
