@@ -45,9 +45,6 @@ WordWise is built using Python and the Flask web framework. It integrates with G
 
 ---
 
-Feel free to customize each section further to add specific details about your project, team, and experiences.
-
-
 ## Features
 
 - **Mathematical Word Problem Solver:** WordWise specializes in solving mathematical word problems, providing step-by-step solutions to user-input prompts.
